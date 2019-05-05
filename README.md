@@ -1,5 +1,7 @@
 # 个人工具站点
 
+[![Build Status](https://travis-ci.org/lang710/metools.svg?branch=master)](https://travis-ci.org/lang710/metools) [![Build Status](https://travis-ci.org/lang710/metools.svg?branch=master)](https://travis-ci.org/lang710/metools)
+
 **这个工具个人及朋友实际使用的时候主要还是 Chrome 插件居多，欢迎使用(https://github.com/yimogit/metools-plugin)**
 
 本项目是一个使用 vue2.0+layui 制作的工具站点          
