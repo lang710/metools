@@ -1,20 +1,20 @@
 language: node_js
-node_js: 
-    - '6.10.3'
+# nodejs版本
+node_js:
+  - '6'
 
 # Travis-CI Caching
 cache:
   directories:
     - node_modules
 
-
 # S: Build Lifecycle
 install:
   - npm install
-  #- npm install --registry=https://registry.npm.taobao.org
 
 before_script:
 
+# 无其他依赖项所以执行npm run build构建就行了
 script:
   - npm run build
 
@@ -28,9 +28,12 @@ after_script:
   - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:${P_BRANCH}
 # E: Build LifeCycle
 
+# 指定分支，只有指定的分支提交时才会运行脚本
 branches:
   only:
     - master
+
 env:
- global:
-   #- GH_REF: github.com/yimogit/metools.git
+  global:
+    # 我将其添加到了travis-ci的环境变量中
+    #- GH_REF: github.com/lang710/metools.git
